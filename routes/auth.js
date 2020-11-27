@@ -20,7 +20,6 @@ router.post(
         check('name', 'El nombre es obligatorio').not().isEmpty(),
         check('password', 'El password debe ser de 6 caracteres').isLength({ min: 6 }),
         check('grade', 'El grado es obligatorio').not().isEmpty(),
-        check('institution', 'La institucion es obligatorio').not().isEmpty(),
         validarCampos
     ], 
     crearUsuario 

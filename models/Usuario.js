@@ -19,8 +19,7 @@ const UsuarioSchema = Schema({
         require: true 
     },
     institution: {
-        type: String,
-        require: false 
+        type: String
     }
 });
 

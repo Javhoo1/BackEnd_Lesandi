@@ -9,6 +9,19 @@ const crearUsuario = async(req,res = response ) => {
 
     const { user_name, password } = req.body;
 
+    try{
+        let usuario = await Usuario.findOne({ user_name });
+
+        if ( usuario = '' ){
+            return res.status(400).json({
+                ok: false,
+                msg: 'Nombre de usuario vacio'
+            });
+        }
+    } catch {
+        
+    }
+
     try {
         let usuario = await Usuario.findOne({ user_name });
 
